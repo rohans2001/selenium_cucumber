@@ -29,10 +29,10 @@ System.out.println("Inside step- browser is open");
 	    driver.navigate().to("https://practicetestautomation.com/practice-test-login/");
 	}
 
-	@When("user enter username and password")
-	public void user_enter_username_and_password() {
-	    driver.findElement(By.xpath("//input[@id='username']")).sendKeys("student");
-	    driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
+	@When("^user enter (.*) and (.*)$")
+	public void user_enter_username_and_password(String username,String password) {
+	    driver.findElement(By.xpath("//input[@id='username']")).sendKeys(username);
+	    driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
 	}
 	
 	@And("user click on login button")

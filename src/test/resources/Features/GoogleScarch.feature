@@ -6,3 +6,5 @@ Feature: feature to test google scarch funcationality
     When user enters a text in scarch box
     And hits enter
     Then navigate to scarch result
+    
+    //test
